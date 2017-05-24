@@ -134,7 +134,7 @@ socialLogin.directive("gLogin", function($rootScope, social, socialLoginService)
 				var fetchUserDetails = function(){
 					var currentUser = scope.gauth.currentUser.get();
 					var profile = currentUser.getBasicProfile();
-					var idToken = currentUser.getAuthResponse().id_token;
+					var idToken = currentUser.getAuthResponse().access_token;
 					return {
 						token: idToken, 
 						name: profile.getName(), 
